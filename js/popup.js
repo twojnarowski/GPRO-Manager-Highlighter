@@ -36,7 +36,7 @@
 		var textarea = sectionNode.getElementsByClassName(classNames[handlingIndex])[0];
 		textarea.id = classNames[handlingIndex].concat("-", bgColorCode);
 		textarea.dataset.bgColor = bgColorCode;
-		textarea.value = wordGroupsDict[bgColorCode].words.join(" ");
+		textarea.value = (wordGroupsDict[bgColorCode].words.join(",")+",").replace(/ \,/g, ',');;
 		textarea.addEventListener("blur", wordListChangeHandlerFactory(wordGroupsDict));
 		handlingIndex++;
 
@@ -93,7 +93,7 @@
 		return function (event) {
 			var groupName = event.target.dataset.bgColor;
 			var wordGroup = wordGroupsDict[groupName];
-			wordGroup.words = event.target.value.match(/[^\s]+/g) || [];
+			wordGroup.words = event.target.value.match(/[^,]+/g) || [];
 
 			saveAndSendMsg(wordGroupsDict);
 		};

@@ -163,4 +163,5 @@
 		highlightAllWords(messageBody);
 		if (sendResponse) sendResponse({content: "highlight done!"});
 	});
+
 }();

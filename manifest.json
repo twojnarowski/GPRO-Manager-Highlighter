@@ -1,6 +1,6 @@
 {
-   "name": "Grouped multi-word highlight",
-   "description": "Highlight multiple words in different groups in web pages.",
+   "name": "GPRO Managers Highliter",
+   "description": "Highlight multiple managers with different colors.",
    "icons": {
       "100": "img/100x100.png",
       "128": "img/128x128.png",
@@ -12,14 +12,14 @@
       "default_popup": "popup.html"
    },
 
-   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ],
+   "permissions": ["declarativeContent", "tabs", "http://*/*", "https://*/*", "storage" ],
 
    "content_scripts": [ {
       "all_frames": true,
       "css": [ "css/highlight.css" ],
       "js": [ "js/content-action.js" ],
       "run_at": "document_idle",
-      "matches": [ "http://*/*", "https://*/*", "file://*/*" ]
+      "matches": [ "http://www.gpro.net/*", "https://www.gpro.net/*" ]
    } ],
 
    "update_url": "https://clients2.google.com/service/update2/crx",
