@@ -10,15 +10,15 @@
 1. Use commas (',') to seperate Managers.
 
 
-Reference:
+# Reference:
 - http://james.padolsey.com/javascript/replacing-text-in-the-dom-solved/
 - http://stackoverflow.com/questions/2582831/how-can-i-highlight-the-text-of-the-dom-range-object
 - https://chrome.google.com/webstore/detail/multi-highlight/pfgfgjlejbbpfmcfjhdmikihihddeeji
 - https://developer.chrome.com/docs/extensions/mv2/getstarted/
 
-Forked from:
+# Forked from:
 https://github.com/WindzCUHK/chrome-highlight-extension
 
-Bug:
+# Bug:
 - There may be change in DOM structure if the keyword spans across multi HTML tag.
 - When page init, no content in body. Currently, hard-coded a delay, may investigate using MutationObserver() to solve it.
